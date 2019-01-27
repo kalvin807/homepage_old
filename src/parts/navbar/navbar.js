@@ -43,8 +43,8 @@ class Navbar extends Component {
 
     const stickyClass = this.state.isSticky ? 'sticky' : '';
     const stickyStyles = this.state.isSticky
-      ? { backgroundColor: '#rgba(0,0,0,.5)', color: '#000000' }
-      : { backgroundColor: '#rgba(0,0,0,.5)', color: '#000000' };
+      ? { backgroundColor: '#rgba(0,0,0,.5)', color: '#FFFFFF' }
+      : { backgroundColor: '#rgba(0,0,0,.5)', color: '#FFFFFF' };
     return (
       <nav
         className={stickyClass}
@@ -56,7 +56,7 @@ class Navbar extends Component {
         <style jsx="true">
           {`
             .menu__item:hover {
-              border-bottom: 2px solid ${'#000000'};
+              border-bottom: 2px solid ${'#FFFFFF'};
             }
           `}
         </style>

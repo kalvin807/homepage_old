@@ -1,26 +1,22 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Navbar from 'parts/navbar';
 
 import './style.scss';
 
-const LandingPage = (props, context) => {
-
+const LandingPage = () => {
   return (
-    <div style={{ backgroundColor: "#FFFFFF" }} className="landing-page">
+    <div className="landing-page">
       <Navbar />
-      <main style={{ color: "#000000" }}>
+      <main style={{ color: "#FFFFFF" }}>
         <div className="intro-wrapper">
           <div className="intro-name">Hello, I'm Calvin!</div>
           <div className="tagline">
-            Full Stack Dev | Open-Source Enthusiast | Blogger | Ninja
+            HKU Student | Computer Science Year 2 | Boardgame fan
           </div>
         </div>
       </main>
     </div>
   );
 };
-LandingPage.contextTypes = {
-  theme: PropTypes.any
-};
+
 export default LandingPage;

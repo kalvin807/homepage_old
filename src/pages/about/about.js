@@ -4,7 +4,7 @@ import './style.scss';
 const AboutPage = (props, context) => {
 
   return (
-    <div className="about-page" style={{ backgroundColor: "#FFFFFF" }}>
+    <div className="about-page" >
       <style jsx="true">
         {`
           .highlight {
