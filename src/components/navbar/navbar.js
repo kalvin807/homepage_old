@@ -63,15 +63,21 @@ class Navbar extends Component {
         <div className="menu">
           <div
             className="menu__item active"
+            onClick={() => this.scrollToPage('.landing-page')}
+          >
+            Home
+          </div>
+          <div
+            className="menu__item"
             onClick={() => this.scrollToPage('.about-page')}
           >
             About
           </div>
           <div
             className="menu__item"
-            onClick={() => this.scrollToPage('.portfolio-page')}
+            onClick={() => this.scrollToPage('.projects-page')}
           >
-            Portfolio
+            Projects
           </div>
         </div>
       </nav>

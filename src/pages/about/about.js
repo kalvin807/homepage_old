@@ -10,30 +10,20 @@ const AboutPage = (props, context) => {
         <div className="about-wrapper">
           <div className="about-content" style={{ color: "#FFFFFF" }}>
             <p>
-              I like <span className="highlight">JavaScript</span> and
-              everything web.
+              I like programming and trying out new things.
             </p>
             <p>
-              When my dev senses kick-in I build presumably{' '}
-              <span className="highlight"> awesome stuff</span>. I stay close to
-              the community and try to keep tabs with the pace at which the web
-              is evolving. I also like to{' '}
-              <span className="highlight">blog</span> what I learn.
+              When I have a new random idea, I will instantly learn it from the web and try to build it. 
+              Therefore I stay close to the current trend of programming and try to keep 
+              in pace with rapidly evolving web.
             </p>
             <p>
-              I built this site <span className="highlight">from scratch</span>.
-              By scratch, I mean <i>absolutely from scratch</i>{' '}
-              <span className="highlight">
-                without any UI library/framework
-              </span>{' '}
-              (except React though) and had so much fun along the way.
+            I built this web as my first trial on React. I referenced a lot of other people work.
+            Along with this web creation, I taught my self the basic of javascript and how to react works.
             </p>
             <p>
-              React-Redux, Node.js, Ruby on Rails, Java, Spring Boot, Docker and
-              AWS are the main tricks up my sleeve. I am also obsessed with making the web look pretty with SASS/CSS.
-            </p>
-            <p className="text-emoji" style={{ color: "#FFFFFF" }}>
-              \ (•◡•) /
+            On the other hand, I also work with C++/C, bash, java, python, etc. 
+            However, these mainly for my acdemic work, and I wish I can have more chance to use my skills to bring more ideas into reality. :D
             </p>
           </div>
         </div>

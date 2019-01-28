@@ -2,6 +2,7 @@ import React from 'react';
 import './style.scss';
 
 const Item = (props) =>{
+
     if (props.render) return props.render;
     else
         return(
@@ -18,8 +19,6 @@ const Item = (props) =>{
               <i className="fab fa-html5" />
             </div>
             <div className="portfolio-item__links">
-              <a src="#">Code</a>
-              <a src="#">Blog</a>
             </div>
           </div>
         );
