@@ -1,19 +1,18 @@
 import React from 'react';
-// import PortfolioItem from '@components/PortfolioItem';
-import Items from './items';
+import Item from 'components/projectsItem';
+import itemList from './itemslist';
 
 import './style.scss';
 
 const Projects = () => {
   return (
-    <div className="portfolio-page" style={{ backgroundColor: "#FFFFFF" }}>
+    <div className="project" >
       <div className="content-grid">
         <h1 style={{ color: "#FFFFFF" }}>Portfolio</h1>
-        <div className="portfolio-wrapper">
+        <div className="projects-wrapper">
           <style jsx="true">
             {`
               .portfolio-item {
-                background-color: ${"#FFFFFF"};
                 color: ${"#FFFFFF"};
               }
               .portfolio-item a {
@@ -25,8 +24,8 @@ const Projects = () => {
             `}
           </style>
           {/* <PortfolioItem /> */}
-          {Items.map((item, i) => (
-            <Items render={item.render} key={i} />
+          {itemList.map((item, i) => (
+            <Item render={item.render} key={i} />
           ))}
         </div>
       </div>

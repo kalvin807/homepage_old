@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Landing from 'pages/landing';
 import About from 'pages/about';
 import Projects from 'pages/projects';
-import Background from 'parts/background';
+import Background from 'components/background';
 
 
 class App extends Component {
