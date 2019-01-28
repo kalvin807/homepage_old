@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Landing from 'pages/landing';
 import About from 'pages/about';
-import Background from 'parts/background'
+import Projects from 'pages/projects';
+import Background from 'parts/background';
+
 
 class App extends Component {
   render() {
@@ -10,6 +12,7 @@ class App extends Component {
         <Background/>
         <Landing/>
         <About/>
+        <Projects/>
       </div>
       );
   }

@@ -5,20 +5,10 @@ const AboutPage = (props, context) => {
 
   return (
     <div className="about-page" >
-      <style jsx="true">
-        {`
-          .highlight {
-            background-color: ${"#000000"};
-          }
-          ::selection {
-            background-color: ${"#000000"};
-          }
-        `}
-      </style>
       <div className="content-grid">
-        <h1 style={{ color: "#000000" }}>About</h1>
+        <h1 style={{ color: "#FFFFFF" }}>About</h1>
         <div className="about-wrapper">
-          <div className="about-content" style={{ color: "#000000" }}>
+          <div className="about-content" style={{ color: "#FFFFFF" }}>
             <p>
               I like <span className="highlight">JavaScript</span> and
               everything web.
@@ -42,7 +32,7 @@ const AboutPage = (props, context) => {
               React-Redux, Node.js, Ruby on Rails, Java, Spring Boot, Docker and
               AWS are the main tricks up my sleeve. I am also obsessed with making the web look pretty with SASS/CSS.
             </p>
-            <p className="text-emoji" style={{ color: "#000000" }}>
+            <p className="text-emoji" style={{ color: "#FFFFFF" }}>
               \ (•◡•) /
             </p>
           </div>
