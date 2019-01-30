@@ -35,16 +35,11 @@
         font-weight: 300;
 
       }
-    }
 
-    .browser-notes {
-      font-size: 0.75rem;
-
-      span {
-        border-width: 1px;
-        border-style: solid;
-        padding: 0.125rem 0.5rem;
+      > .icon{
+        margin: 1.5rem 0;
       }
     }
+
   }
 }

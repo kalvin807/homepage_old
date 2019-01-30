@@ -1,4 +1,5 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default [{
   name: 'cbc_page',
@@ -11,9 +12,9 @@ export default [{
         My first attempt to work on webpage. Created it by using Bootstrap 4. 
       </div>
       <div className='portfolio-item__icon'>
-        <i className="fab fa-js"></i>
-        <i className="fab fa-html5"></i>
-        <i className="fab fa-css3-alt"></i>
+        <FontAwesomeIcon icon={['fab', 'html5']}/>
+        <FontAwesomeIcon icon={['fab', 'css3-alt']}/>
+        <FontAwesomeIcon icon={['fab', 'js-square']}/>
       </div>
       <div className='portfolio-item__links'>
         <a target="_blank" rel="noopener noreferrer" href="http://www.chesssoc.hkusu.hku.hk/">Link</a>
@@ -31,10 +32,10 @@ export default [{
         A personal page built by using React , JavaScript and HTML5/CSS3.
       </div>
       <div className='portfolio-item__icon'>
-        <i className="fab fa-js"></i>
-        <i className="fab fa-react"></i>
-        <i className="fab fa-html5"></i>
-        <i className="fab fa-css3-alt"></i>
+        <FontAwesomeIcon icon={['fab', 'js-square']}/>
+        <FontAwesomeIcon icon={['fab', 'react']}/> 
+        <FontAwesomeIcon icon={['fab', 'html5']}/>
+        <FontAwesomeIcon icon={['fab', 'css3-alt']}/>
       </div>
       <div className='portfolio-item__links'>
         <a target="_blank" rel="noopener noreferrer" href="https://github.com/kalvin807/homepage">Github</a>
@@ -47,15 +48,15 @@ export default [{
   render: (
     <div className='portfolio-item'>
       <div className='portfolio-item__title'>
-        Small-scale Minecraft Server
+        Minecraft Server
       </div>
       <div className='portfolio-item__desc'>
         A 24 hours running private Minecraft Server hosted on AWS Linux EC2.
       </div>
       <div className='portfolio-item__icon'>
-        <i className="fab fa-aws"></i>
-        <i className="fab fa-linux"></i>
-        <i className="fab fa-centos"></i>
+        <FontAwesomeIcon icon={['fab', 'aws']}/>
+        <FontAwesomeIcon icon={['fab', 'linux']}/>
+        <FontAwesomeIcon icon={['fab', 'centos']}/>
       </div>
     </div>
   )

@@ -1,3 +1,5 @@
+@import '../../styles/breakpoints';
+
 nav {
     position: fixed;
     top: 0;
@@ -6,6 +8,10 @@ nav {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    
+    @include breakpoint-small-down {
+        height: 4rem;
+      }
 
     .menu {
         margin-right: 1rem;
