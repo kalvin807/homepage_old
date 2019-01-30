@@ -60,7 +60,6 @@ class Navbar extends Component {
             }
           `}
         </style>
-        <ThemeSwitchButton/>
         <div className="menu">
           <div
             className="menu__item active"
