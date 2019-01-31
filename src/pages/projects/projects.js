@@ -1,28 +1,29 @@
 import React from 'react';
 import Item from 'components/projectsItem';
 import itemList from './itemslist';
-import Consumer from 'components/themeSwitcher';
+import TopPage from 'components/topPage';
+import ThemesContext from 'contexts/themes/themesContext';
 import './style.scss';
 
 const Projects = () => {
   return (
-    <Consumer>
-    {(theme) => (
+    <ThemesContext.Consumer>
+    {(state) => (
     <div className="projects-page" >
       <div className="content-grid">
-        <h1 style={{ color: theme.textcolor }}>Projects</h1>
+        <h1 style={{ color: state.theme.textcolor }}>Projects</h1>
         <div className="projects-wrapper">
           <style jsx="true">
             {`
               .portfolio-item {
-                background-color: ${'rgba(145,225,242, 0.5)'};
-                color: ${theme.textcolor};
+                background-color: ${state.theme.itembgcolor};
+                color: ${state.theme.textcolor};
               }
               .portfolio-item a {
-                color: ${theme.textcolor};
+                color: ${state.theme.textcolor};
               }
               .portfolio-item__links a:hover {
-                border-bottom: 2px solid ${theme.textcolor};
+                border-bottom: 2px solid ${state.theme.textcolor};
               }
             `}
           </style>
@@ -32,10 +33,10 @@ const Projects = () => {
           ))}
         </div>
       </div>
+      <TopPage pageSelector=".landing-page"/>
     </div>
-    )
-    }
-    </Consumer>
+    )}
+    </ThemesContext.Consumer>
   );
 };
 

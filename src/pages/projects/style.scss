@@ -13,8 +13,13 @@
   }
 
   h1 {
+    font-family: 'Julius Sans One', sans-serif;
     padding: 1rem 0;
     font-size: 3rem;
+
+    @include breakpoint-small-down {
+      font-size: 2rem;
+    }
   }
 
   .content-grid {

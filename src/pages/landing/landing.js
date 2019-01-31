@@ -1,29 +1,28 @@
 import React from 'react';
-import Navbar from 'components/navbar';
 import ContactIcons from 'components/contacticons';
-import {ThemeContext} from 'components/themeSwitcher/themeSwitcher';
+import ThemesContext from 'contexts/themes/themesContext';
+import NextPage from 'components/nextPage';
 import './style.scss';
 
-
-
-const LandingPage = (props) => {
+const LandingPage = () => {
   return (
-    <ThemeContext.Consumer>
-      {(toggletheme) => (
-    <div className="landing-page">
-      <Navbar />
-      <main style={{ color: toggletheme.textcolor }}>
-        <div className="intro-wrapper">
-          <div className="intro-name">Hello, I'm Calvin!</div>
-          <div className="tagline">
-            HKU Student | Computer Science Year 2 | Boardgame fan
-          </div>
-          <ContactIcons/>
+    <ThemesContext.Consumer>
+      {(state) => (
+        <div className="landing-page">
+          
+          <main style={{ color: state.theme.textcolor }}>
+            <div className="intro-wrapper">
+              <div className="intro-name">Hello! I'm Calvin</div>
+              <div className="tagline">
+                HKU Student | Computer Science Year 2 | Boardgame fan
+              </div>
+              <ContactIcons/>
+            </div>
+          </main>
+          <NextPage pageSelector=".about-page"/>
         </div>
-      </main>
-    </div>
       )}
-    </ThemeContext.Consumer>
+    </ThemesContext.Consumer>
   );
 };
 export default LandingPage;

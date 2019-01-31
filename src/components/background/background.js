@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-
+import ThemesContext from 'contexts/themes/themesContext';
 
 class Background extends Component {
+
     render() {
+        const state = this.context;
         return (
             <div className="background">
                 <style jsx="true">
@@ -11,7 +13,7 @@ class Background extends Component {
                             width: 100wh;
                             height: 200vh;
                             color: #fff;
-                            background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+                            background: linear-gradient(-45deg, ${state.theme.bgcolor1}, ${state.theme.bgcolor2}, ${state.theme.bgcolor3}, ${state.theme.bgcolor4});
                             background-size: 400% 400%;
                             -webkit-animation: Gradient 15s ease infinite;
                             -moz-animation: Gradient 15s ease infinite;
@@ -60,4 +62,5 @@ class Background extends Component {
         );
 };
 }
+Background.contextType = ThemesContext;
 export default Background;

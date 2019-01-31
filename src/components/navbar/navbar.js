@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { toElement as scrollToElement } from '../../tool/scroll';
 import ThemeSwitchButton from '../themeSwitcher/themeSwitchButton';
+import ThemesContext from 'contexts/themes/themesContext';
 import './style.scss';
 
 
@@ -39,11 +40,12 @@ class Navbar extends Component {
     scrollToElement(nextPage);
   }
 
+  static contextType = ThemesContext
   render() {
-
+    const theme = this.context;
     const stickyClass = this.state.isSticky ? 'sticky' : '';
     const stickyStyles = this.state.isSticky
-      ? { backgroundColor: 'rgba(253,253,255,0.2)', color: '#FFFFFF' }
+      ? { backgroundColor: theme.theme.navAlpha, color: '#FFFFFF' }
       : { backgroundColor: 'rgba(0,0,0,0.0)', color: '#FFFFFF' };
     return (
       <nav
@@ -60,6 +62,9 @@ class Navbar extends Component {
             }
           `}
         </style>
+        <div className="theme-icon bounce-xy">
+        <ThemeSwitchButton/>
+        </div>
         <div className="menu">
           <div
             className="menu__item active"
@@ -84,6 +89,5 @@ class Navbar extends Component {
     );
   }
 }
-
 
 export default Navbar;
