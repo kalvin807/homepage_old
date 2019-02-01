@@ -22,7 +22,6 @@
       justify-content: center;
       text-align: center;
 
-
       > .intro-name {
         font-family: 'Julius Sans One', sans-serif;
         font-size: 5rem;
@@ -43,15 +42,13 @@
         margin: 1.5rem 0;
 
         @include breakpoint-small-down {
-          font-size: 1.0rem;
+          font-size: 1rem;
         }
-
       }
 
-      > .icon{
+      > .icon {
         margin: 1.5rem 0;
       }
     }
-
   }
 }

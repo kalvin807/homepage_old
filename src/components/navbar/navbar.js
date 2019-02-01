@@ -4,8 +4,6 @@ import ThemeSwitchButton from '../themeSwitcher/themeSwitchButton';
 import ThemesContext from 'contexts/themes/themesContext';
 import './style.scss';
 
-
-
 class Navbar extends Component {
   constructor(props) {
     super(props);
@@ -40,7 +38,7 @@ class Navbar extends Component {
     scrollToElement(nextPage);
   }
 
-  static contextType = ThemesContext
+  static contextType = ThemesContext;
   render() {
     const theme = this.context;
     const stickyClass = this.state.isSticky ? 'sticky' : '';
@@ -50,11 +48,11 @@ class Navbar extends Component {
     return (
       <nav
         className={stickyClass}
-        ref={(elem) => {
+        ref={elem => {
           this.nav = elem;
         }}
         style={stickyStyles}
-      > 
+      >
         <style jsx="true">
           {`
             .menu__item:hover {
@@ -63,7 +61,7 @@ class Navbar extends Component {
           `}
         </style>
         <div className="theme-icon bounce-xy">
-        <ThemeSwitchButton/>
+          <ThemeSwitchButton />
         </div>
         <div className="menu">
           <div

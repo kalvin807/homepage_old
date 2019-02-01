@@ -7,9 +7,9 @@
 /* roboto - latin */
 
 html {
-	font-size: 14px;
+  font-size: 14px;
 
-	@include breakpoint-small-up {
+  @include breakpoint-small-up {
     font-size: 16px;
   }
 
@@ -19,43 +19,52 @@ html {
 
   @include breakpoint-large-up {
     font-size: 20px;
-	}
-	
-	@include breakpoint-xxlarge-up {
+  }
+
+  @include breakpoint-xxlarge-up {
     font-size: 22px;
   }
 }
 
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
-	font-family: 'Roboto', sans-serif;
-	font-weight: 300;
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
 }
 
 h1 {
-	font-weight: 900;
+  font-weight: 900;
 }
 
 .content-grid {
-	margin: 0 auto;
-	width: calc(100% - 5rem); // mobile
+  margin: 0 auto;
+  width: calc(100% - 5rem); // mobile
 
-	@include breakpoint-medium-up {
-		width: calc(100% - 5rem);
-	}
+  @include breakpoint-medium-up {
+    width: calc(100% - 5rem);
+  }
 
-	@include breakpoint-large-up {
-		width: calc(100% - 10rem);
-	}
+  @include breakpoint-large-up {
+    width: calc(100% - 10rem);
+  }
 
-	@include breakpoint-xlarge-up {
-		width: calc(100% - 20rem);
-	}
+  @include breakpoint-xlarge-up {
+    width: calc(100% - 20rem);
+  }
 }
 
-::-webkit-scrollbar { 
-	display: none; 
+::-webkit-scrollbar {
+  display: none;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
