@@ -1,12 +1,12 @@
 import React from 'react';
 import ContactIcons from 'components/contacticons';
-import ThemesContext from 'contexts/themes/themesContext';
+import ThemeContext from 'contexts/themes/ThemeContext';
 import NextPage from 'components/nextPage';
 import './style.scss';
 
 const LandingPage = () => {
   return (
-    <ThemesContext.Consumer>
+    <ThemeContext.Consumer>
       {state => (
         <div className="landing-page">
           <main style={{ color: state.theme.textcolor }}>
@@ -21,7 +21,7 @@ const LandingPage = () => {
           <NextPage pageSelector=".about-page" />
         </div>
       )}
-    </ThemesContext.Consumer>
+    </ThemeContext.Consumer>
   );
 };
 export default LandingPage;

@@ -2,12 +2,12 @@ import React from 'react';
 import Item from 'components/projectsItem';
 import itemList from './itemslist';
 import TopPage from 'components/topPage';
-import ThemesContext from 'contexts/themes/themesContext';
+import ThemeContext from 'contexts/themes/ThemeContext';
 import './style.scss';
 
 const Projects = () => {
   return (
-    <ThemesContext.Consumer>
+    <ThemeContext.Consumer>
       {state => (
         <div className="projects-page">
           <div className="content-grid">
@@ -36,7 +36,7 @@ const Projects = () => {
           <TopPage pageSelector=".landing-page" />
         </div>
       )}
-    </ThemesContext.Consumer>
+    </ThemeContext.Consumer>
   );
 };
 
