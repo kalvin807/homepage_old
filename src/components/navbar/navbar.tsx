@@ -3,7 +3,8 @@ import React, {
   useEffect,
   createRef,
   RefObject,
-  useContext
+  useContext,
+  useCallback
 } from 'react';
 import { toElement as scrollToElement } from '../../tool/scroll';
 import ThemeSwitchButton from '../themeSwitcher/themeSwitchButton';
@@ -14,13 +15,7 @@ const Navbar: React.FC = () => {
   const [sticky, setSticky] = useState(false);
   const navRef: RefObject<HTMLElement> = createRef();
   const style = useContext(ThemeContext);
-  const handleScroll = (): void => {
-    if (window.pageYOffset > navRef.current?.offsetTop!) {
-      setSticky(true);
-    } else {
-      setSticky(false);
-    }
-  };
+
   const scrollToPage = (pageSelection: string): void => {
     const nextPage = document.querySelector(pageSelection);
     scrollToElement(nextPage);
@@ -30,12 +25,20 @@ const Navbar: React.FC = () => {
     ? { backgroundColor: style.theme.navAlpha, color: '#FFFFFF' }
     : { backgroundColor: 'rgba(0,0,0,0.0)', color: '#FFFFFF' };
 
+  const handleScroll = useCallback((): void => {
+    if (navRef.current && window.pageYOffset > navRef.current.offsetTop) {
+      setSticky(true);
+    } else {
+      setSticky(false);
+    }
+  }, [navRef]);
+
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return (): void => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [handleScroll]);
 
   return (
     <nav className={stickyClass} ref={navRef} style={stickyStyles}>

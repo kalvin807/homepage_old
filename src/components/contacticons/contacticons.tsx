@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import './style.scss';
 
-const ContactIcons = () => {
+const ContactIcons: React.FC = () => {
   return (
     <div className="social-icons animate-icons">
       <a

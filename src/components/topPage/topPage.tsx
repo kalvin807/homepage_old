@@ -1,27 +1,28 @@
-import React, { Component } from 'react';
+import React, { useContext } from 'react';
 import ThemeContext from 'contexts/themes/ThemeContext';
 import { toElement as scrollToElement } from 'tool/scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './style.scss';
 
-class TopPage extends Component {
-  scrollToNext() {
-    const { pageSelector } = this.props;
+interface TopPageProps {
+  pageSelector: string;
+}
+
+const TopPage: React.FC<TopPageProps> = props => {
+  const scrollToNext = (): void => {
+    const { pageSelector } = props;
     const nextPage = document.querySelector(pageSelector);
     scrollToElement(nextPage);
-  }
-  static contextType = ThemeContext;
-  render() {
-    const state = this.context;
-    return (
-      <div className="scroll-to-top" onClick={e => this.scrollToNext()}>
-        <div className="arrow bounce" style={{ color: state.theme.textcolor }}>
-          <div className="scroll-text">Back to Top</div>
-          <FontAwesomeIcon icon="angle-double-up" />
-        </div>
+  };
+  const style = useContext(ThemeContext).theme;
+  return (
+    <div className="scroll-to-top" onClick={(): void => scrollToNext()}>
+      <div className="arrow bounce" style={{ color: style.textcolor }}>
+        <div className="scroll-text">Back to Top</div>
+        <FontAwesomeIcon icon="angle-double-up" />
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default TopPage;

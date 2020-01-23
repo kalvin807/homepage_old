@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import ThemeContext from 'contexts/themes/ThemeContext';
 
-const Background: React.SFC = () => {
+const Background: React.FC = () => {
   const style = useContext(ThemeContext).theme;
 
   return (

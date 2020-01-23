@@ -6,7 +6,7 @@ export default [
     name: 'cbc_page',
     render: (
       <div className="portfolio-item">
-        <div className="portfolio-item__title">CBC's homepage</div>
+        <div className="portfolio-item__title">CBC"s homepage</div>
         <div className="portfolio-item__desc">
           My first attempt to work on webpage. Created it by using Bootstrap 4.
         </div>

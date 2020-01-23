@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ThemeContext from 'contexts/themes/ThemeContext';
 
-const ThemeSwitchButton: React.SFC = () => {
+const ThemeSwitchButton: React.FC = () => {
   const style = useContext(ThemeContext).theme;
   const toggleStyle = useContext(ThemeContext).toggle;
 

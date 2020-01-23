@@ -3,7 +3,7 @@ import ThemeContext from 'contexts/themes/ThemeContext';
 
 import './style.scss';
 
-const AboutPage: React.SFC = () => {
+const AboutPage: React.FC = () => {
   const theme = useContext(ThemeContext).theme;
   return (
     <div className="about-page">
