@@ -1,7 +1,11 @@
 import React from 'react';
 import './style.scss';
 
-const Item = props => {
+interface ItemProps {
+  render: JSX.Element;
+}
+
+const Item: React.FC<ItemProps> = props => {
   if (props.render) return props.render;
   else
     return (
