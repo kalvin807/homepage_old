@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import ThemeContext from 'contexts/themes/ThemeContext';
-
+import NextPage from 'components/nextPage/nextPage';
 import './style.scss';
 
 const AboutPage: React.FC = () => {
@@ -33,7 +33,7 @@ const AboutPage: React.FC = () => {
           </div>
         </div>
       </div>
-      {/* <NextPage pageSelector=".projects-page" /> */}
+      <NextPage pageSelector=".projects-page" />
     </div>
   );
 };
