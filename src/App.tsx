@@ -16,15 +16,14 @@ import Navbar from 'components/navbar';
 import { Theme } from 'models/theme.model';
 import { themes } from 'contexts/themes/themes';
 import ThemeContext from 'contexts/themes/ThemeContext';
-import { Languages } from 'contexts/languages/languages';
 import LanguageContext from 'contexts/languages/LanguageContext';
 
 library.add(fab, faSun, faMoon, faAngleDown, faAngleDoubleUp);
 
 const App = (): ReactElement => {
   const [style, setStyle] = useState(themes.day);
-  const [lang, setLang] = useState(Languages.ENGLISH);
-  const switchLang = (selection: Languages): void => setLang(selection);
+  const [lang, setLang] = useState(0);
+  const switchLang = (): void => setLang((lang + 1) % 3);
   const toggleStyle = (): void =>
     setStyle((style: Theme) =>
       style === themes.day ? themes.night : themes.day
@@ -32,7 +31,7 @@ const App = (): ReactElement => {
 
   return (
     <div className="landing-page">
-      <LanguageContext.Provider value={{ language: lang, switch: switchLang }}>
+      <LanguageContext.Provider value={{ langCode: lang, switch: switchLang }}>
         <ThemeContext.Provider value={{ theme: style, toggle: toggleStyle }}>
           <Background />
           <Navbar />

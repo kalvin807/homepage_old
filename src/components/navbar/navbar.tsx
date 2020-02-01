@@ -9,6 +9,7 @@ import React, {
 import { toElement as scrollToElement } from '../../tool/scroll';
 import ThemeSwitchButton from '../themeSwitcher/themeSwitchButton';
 import ThemeContext from 'contexts/themes/ThemeContext';
+import LanguageButton from '../languageButton/LanguageButton';
 import './style.scss';
 
 const Navbar: React.FC = () => {
@@ -51,6 +52,9 @@ const Navbar: React.FC = () => {
       </style>
       <div className="theme-icon bounce-xy">
         <ThemeSwitchButton />
+      </div>
+      <div className="theme-icon bounce-xy">
+        <LanguageButton />
       </div>
       <div className="menu">
         <div
