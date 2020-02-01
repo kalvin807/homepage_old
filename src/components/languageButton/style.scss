@@ -1,0 +1,40 @@
+@import '../../styles/breakpoints';
+
+.theme-icons {
+  padding: 0.25rem 0;
+  font-size: 2rem;
+
+  @include breakpoint-small-down {
+    font-size: 2.5rem;
+  }
+
+  a {
+    padding: 0 0.625rem;
+  }
+
+  &.animate-icons {
+    a {
+      display: inline-block;
+      transform: perspective(1px) translateZ(0);
+      box-shadow: 0 0 1px transparent;
+
+      &:hover,
+      &:focus,
+      &:active {
+        animation-name: icon-jump;
+        animation-duration: 0.45s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+      }
+    }
+  }
+
+  @keyframes icon-jump {
+    50% {
+      transform: translateY(-6px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+}
