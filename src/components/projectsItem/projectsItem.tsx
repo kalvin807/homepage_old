@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.scss';
 
-interface ItemProps {
+export interface ItemProps {
   render: JSX.Element;
 }
 

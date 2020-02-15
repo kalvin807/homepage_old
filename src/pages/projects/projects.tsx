@@ -1,12 +1,17 @@
 import React, { useContext } from 'react';
 import Item from 'components/projectsItem';
-import itemList from './itemslist';
+import { getitemlist } from './itemslist';
 import TopPage from 'components/topPage';
 import ThemeContext from 'contexts/themes/ThemeContext';
+import LanguageContext from 'contexts/languages/LanguageContext';
+import { ItemInterface } from './itemslist';
 import './style.scss';
 
 const Projects: React.FC = () => {
   const style = useContext(ThemeContext).theme;
+  const language = useContext(LanguageContext).langCode;
+  const itemList = getitemlist(language);
+
   return (
     <div className="projects-page">
       <div className="content-grid">
@@ -26,8 +31,7 @@ const Projects: React.FC = () => {
               }
              `}
           </style>
-          {/* <PortfolioItem /> */}
-          {itemList.map((item, i) => (
+          {itemList.map((item: ItemInterface, i) => (
             <Item render={item.render} key={i} />
           ))}
         </div>
