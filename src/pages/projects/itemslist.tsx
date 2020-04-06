@@ -1,5 +1,5 @@
-import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from 'react';
 
 interface ItemConfig {
   title: string;
@@ -24,7 +24,9 @@ export const getitemlist = (lang: number): Array<ItemInterface> => {
     cbcPage: {
       title: 'Boardgame Club Homepage',
       desc: {
-        0: 'My first attempt to work on webpage. Created it by using Bootstrap.',
+        0: 'My first attempt to work on webpage. Created it by using Bootstrap. Inspired me to learn more web tech.',
+        1: '第一次創作網頁。使用咗Bootstrap 同簡單嘅CSS製作出嚟嘅網站。',
+        2: '初めて自分で作ったweb。簡単のCCSとBootstrapを使った。',
       },
       icon: [
         <FontAwesomeIcon icon={['fab', 'html5']} />,
@@ -37,6 +39,8 @@ export const getitemlist = (lang: number): Array<ItemInterface> => {
       title: 'My page(Here!)',
       desc: {
         0: 'My intro page made with react/typescript.:)',
+        1: '用React同TypeScript整嘅自我介紹網站。',
+        2: 'ReactとTypeScriptを作った自己紹介ワット。',
       },
       icon: [
         <FontAwesomeIcon icon={['fab', 'js-square']} />,
@@ -47,7 +51,7 @@ export const getitemlist = (lang: number): Array<ItemInterface> => {
       link: { github: 'https://github.com/kalvin807/homepage' },
     },
     minecraftServer: {
-      title: 'Minecraft Server',
+      title: 'Minecraft Server + Web login interface',
       desc: {
         0: `A small minecraft server for friends. Hosted on AWS EC2. Paired with a simple serverless login page,
              so that server only self-start when needed and self-closing when idle! Saved me tons of money.`,
